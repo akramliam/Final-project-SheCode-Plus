@@ -14,6 +14,7 @@ let days = [
   "Saterday",
 ];
 
+
 days = days[day];
 
 if (minutes < 10) {
@@ -22,6 +23,28 @@ if (minutes < 10) {
 
 pDate.innerHTML = `${days} ${hour}:${minutes}`;
 ///////
+
+function dailyForecast(){
+let forecastElement=document.querySelector("#forecast");
+let forecastHTML=`<div class="row">`;
+let days=["Sat","Sun","Mon","Tue","Wed"];
+days.forEach(function(day){
+  forecastHTML=forecastHTML+`<div class="col-2">
+  <div class="weather-forecast-date">
+    ${day}
+  </div>
+<img src="images/sun.png" alt="sun" class="pic" alt="" width="45" />
+  <div class="weather-forecast-temperatures">
+    <span class="weather-forecast-temperature-max">19°</span>
+    <span class="weather-forecast-temperature-min">14°</span>
+
+  </div>
+</div>`
+});
+forecastHTML=forecastHTML+`</div>`;
+forecastElement.innerHTML=forecastHTML;
+}
+////
 function showWeather(response) {
   console.log(response);
   let weatherDegree = document.querySelector("#current-degr");
@@ -80,3 +103,5 @@ celsius.addEventListener("click", farToCelFunction);
 
 let far = document.querySelector("#far");
 far.addEventListener("click", celToFarFunctions);
+//////
+dailyForecast();
