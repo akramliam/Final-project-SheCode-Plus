@@ -1,0 +1,79 @@
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.cities-name {
+  font-size: 30;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Slab", serif;
+  color: blue;
+  margin-top: 45px;
+  margin-bottom: 20px;
+}
+.row .btn {
+  border-radius: 10px;
+  border: 1px solid #8064e9;
+  background: #8064e9;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 200ms ease;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+}
+
+.row .btn:hover {
+  cursor: pointer;
+  background: #5e41a7;
+}
+.current-degree {
+  font-weight: bold;
+  font-size: 28px;
+}
+.gray-txt {
+  color: gray;
+}
+.weather-des {
+  margin: 0;
+  font-size: 12px;
+}
+/*
+.wtsRwe {s
+  color: #70757a;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 16px;
+  padding-left: 9px;
+  padding-top: 6px;
+}
+***
+*/
+
+.futur-days {
+  text-align: center;
+  margin-top: 70px;
+}
+.pic {
+  display: block;
+  margin: 0 auto;
+}
+.weather-forecast{
+  margin-top: 16px;
+  text-align: center;
+  color: #000;
+}
+.weather-forecast-date{
+  font-size: 16px;
+  opacity: 0.5;
+}
+.weather-forecast-temperature-min{
+  opacity: 0.5;
+}
+.weather-forecast-temperature{
+  font-size: 13px;
+}
