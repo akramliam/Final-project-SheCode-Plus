@@ -32,7 +32,6 @@ function formatDay(timestamp){
 }
 
 function dailyForecast(response){
-  console.log("dailyForecast function");
 
   let forecastDays = response.data.daily;
 
@@ -69,7 +68,7 @@ function getForecast(coordinates){
   let apiKey = "3499ef150985eccadd080ff408a018df";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(dailyForecast);
-  console.log(apiUrl);
+  //console.log(apiUrl);
 
 
 }
@@ -107,7 +106,7 @@ function searchCity(event) {
   citylabel.innerHTML = `${cityName.value}`;
   //////
   let apiKey = "3499ef150985eccadd080ff408a018df";
-  console.log(`${cityName.value} ${apiKey}`);
+  //console.log(`${cityName.value} ${apiKey}`);
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName.value}&appid=${apiKey}&&units=metric`;
  axios.get(apiUrl).then(showWeather);
 }
@@ -145,3 +144,13 @@ let far = document.querySelector("#far");
 far.addEventListener("click", celToFarFunctions);
 //////
 //dailyForecast();
+//////////
+function localWeather(event) {
+  let apiKey = "3499ef150985eccadd080ff408a018df";
+  console.log(` ${apiKey}`);
+  let citylabel = document.querySelector("#city-lbl");
+  citylabel.innerHTML = `Tehran`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Tehran&appid=${apiKey}&&units=metric`;
+ axios.get(apiUrl).then(showWeather);
+}
+
