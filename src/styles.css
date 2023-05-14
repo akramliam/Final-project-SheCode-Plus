@@ -1,3 +1,7 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 a {
   color: #007bff;
   text-decoration: none;
@@ -7,6 +11,16 @@ a:hover {
   text-decoration: underline;
   cursor: pointer;
 }
+.weather-app-wrapper{
+  max-width: 680px;
+  margin:30px auto;
+}
+.weather-app{
+ 
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 8px;
+  } 
 .cities-name {
   font-size: 30;
   font-weight: bold;
@@ -31,41 +45,46 @@ a:hover {
   cursor: pointer;
   background: #5e41a7;
 }
+.weather-temperature img{
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
+
+}
+.weather-temperature strong{
+color:rgb(33,33,33);
+font-size: 34px;
+line-height: 1;
+font-weight: 400;
+
+}
+.weather-temperature .units{
+  position: relative;
+  font-size: 14px;
+  top: -16px;
+
+  }
+  .weather-temperature .units a{
+    color: #000;
+  }
 .current-degree {
   font-weight: bold;
   font-size: 28px;
 }
-.gray-txt {
-  color: gray;
-}
+
 .weather-des {
   margin: 0;
   font-size: 12px;
 }
-/*
-.wtsRwe {s
-  color: #70757a;
-  display: inline-block;
-  font-size: 11px;
-  line-height: 16px;
-  padding-left: 9px;
-  padding-top: 6px;
-}
-***
-*/
 
-.futur-days {
-  text-align: center;
-  margin-top: 70px;
-}
-.pic {
-  display: block;
-  margin: 0 auto;
-}
+
 .weather-forecast{
-  margin-top: 16px;
   text-align: center;
   color: #000;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  padding-left: 0;
+
 }
 .weather-forecast-date{
   font-size: 16px;
@@ -77,3 +96,22 @@ a:hover {
 .weather-forecast-temperature{
   font-size: 13px;
 }
+#search-form{
+  display: block;
+  margin: 0 auto;
+}
+/*
+.wtsRwe {s
+  color: #70757a;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 16px;
+  padding-left: 9px;
+  padding-top: 6px;
+}
+***
+
+*/
+
+
+

@@ -90,25 +90,20 @@ function showWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   currentImgElement.setAttribute("alt", response.data.weather[0].description);
-  console.log(windy);
-  console.log(temperature);
   weatherDegree.innerHTML = `${temperature}`;
   humidy.innerHTML=`${humidity}`;
   wind.innerHTML=`${windy}`;
   descriptionElement.innerHTML=`${description}`
   /////
-  console.log("showWeather Function");
-console.log(response.data);
-/////
-getForecast(response.data.coord);
+  getForecast(response.data.coord);
 
 
 }
 function searchCity(event) {
   event.preventDefault();
 
- let cityName = document.querySelector("#search-input");
-let citylabel = document.querySelector("#city-lbl");
+  let cityName = document.querySelector("#search-input");
+  let citylabel = document.querySelector("#city-lbl");
   citylabel.innerHTML = `${cityName.value}`;
   //////
   let apiKey = "3499ef150985eccadd080ff408a018df";
